@@ -11,7 +11,9 @@ function showQuestion(index) {
 // Function to handle the next question button click
 document.getElementById('nextButton').addEventListener('click', function() {
     const currentQuestion = questions[currentQuestionIndex];
-    const isAnswered = currentQuestion.querySelector('input[type="radio"]:checked') || currentQuestion.querySelector('input[type="checkbox"]:checked');
+    const isAnswered = currentQuestion.querySelector('input[type="radio"]:checked') || 
+                      currentQuestion.querySelector('input[type="checkbox"]:checked') || 
+                      currentQuestion.querySelector('textarea');
 
     if (isAnswered) {
         currentQuestionIndex++;
@@ -20,7 +22,7 @@ document.getElementById('nextButton').addEventListener('click', function() {
             showQuestion(currentQuestionIndex);
         } else {
             // All questions answered, show thank you message
-            document.getElementById('submissionMessage').innerText = 'Thank you for your submission!';
+            document.getElementById('submissionMessage').innerText = 'Thank you for your submission! We appreciate your feedback!';
             document.getElementById('surveyForm').style.display = 'none'; // Hide form
         }
     } else {
