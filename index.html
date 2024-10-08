@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Boracay Adventure Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Beyond Boracay Adventure Survey</h1>
+        <p>We’d love to hear your thoughts on why you might not join the Beyond Boracay Jungle Adventure!</p>
+        <form action="submit_survey.php" method="POST">
+            <!-- Question 1 -->
+            <label>1. What concerns you most about joining a jungle adventure outside Boracay?</label><br>
+            <input type="radio" name="concern" value="Safety concerns"> Safety concerns<br>
+            <input type="radio" name="concern" value="Lack of interest in outdoor activities"> Lack of interest in outdoor activities<br>
+            <input type="radio" name="concern" value="Physical fitness or health limitations"> Physical fitness or health limitations<br>
+            <input type="radio" name="concern" value="Fear of wildlife or insects"> Fear of wildlife or insects<br>
+            <input type="radio" name="concern" value="Not enough information provided"> Not enough information provided<br>
+            <input type="radio" name="concern" value="Other"> Other: <input type="text" name="other_concern"><br><br>
+
+            <!-- More questions here, same format -->
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
