@@ -1,12 +1,32 @@
-document.getElementById('surveyForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
+const questions = document.querySelectorAll('.question');
+let currentQuestionIndex = 0;
 
-    // Collect form data (basic example)
-    const formData = new FormData(event.target);
+// Function to show the current question
+function showQuestion(index) {
+    questions.forEach((question, i) => {
+        question.style.display = i === index ? 'block' : 'none';
+    });
+}
 
-    // Process the data (you could log it to the console or send it to a server/API)
-    console.log('Form submitted:', Object.fromEntries(formData.entries()));
+// Function to handle the next question button click
+document.getElementById('nextButton').addEventListener('click', function() {
+    const currentQuestion = questions[currentQuestionIndex];
+    const isAnswered = currentQuestion.querySelector('input[type="radio"]:checked') || currentQuestion.querySelector('input[type="checkbox"]:checked');
 
-    // Show success message
-    document.getElementById('submissionMessage').innerText = 'Thank you for your submission!';
+    if (isAnswered) {
+        currentQuestionIndex++;
+        
+        if (currentQuestionIndex < questions.length) {
+            showQuestion(currentQuestionIndex);
+        } else {
+            // All questions answered, show thank you message
+            document.getElementById('submissionMessage').innerText = 'Thank you for your submission!';
+            document.getElementById('surveyForm').style.display = 'none'; // Hide form
+        }
+    } else {
+        alert('Please answer the question before proceeding!');
+    }
 });
+
+// Show the first question on page load
+showQuestion(currentQuestionIndex);
