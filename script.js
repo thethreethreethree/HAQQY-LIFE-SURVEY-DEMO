@@ -17,7 +17,6 @@ document.getElementById('nextButton').addEventListener('click', function() {
 
     if (isAnswered) {
         currentQuestionIndex++;
-        
         if (currentQuestionIndex < questions.length) {
             showQuestion(currentQuestionIndex);
         } else {
