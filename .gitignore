@@ -1,0 +1,4 @@
+# Ignore unnecessary system files and folders
+.DS_Store
+node_modules/
+*.log
