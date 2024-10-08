@@ -1,30 +1,38 @@
+/* Body styling to handle background and vertical positioning */
 body {
     font-family: Arial, sans-serif;
     background-image: url('images/background.png'); /* Ensure the image path is correct */
     background-size: cover;
-    color: #333;
-    padding: 20px;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* Centers the container horizontally */
+    align-items: flex-start;  /* Adjusts the vertical position, use 'center' or 'flex-end' for other positions */
+    padding-top: 50px;        /* Adjust this value to fine-tune the distance from the top */
+    margin: 0;
 }
 
+/* Survey container styling */
 .container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9); /* Makes the background slightly transparent */
     padding: 20px;
     border-radius: 10px;
     max-width: 600px;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: 100%; /* Adjust this value to vertically center */
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for visual depth */
 }
 
+/* Heading styling */
 h1 {
     text-align: center;
 }
 
+/* Label styling */
 label {
     font-weight: bold;
 }
 
+/* Styling for the Next button */
 input[type="button"] {
     display: block;
     width: 100%;
@@ -36,6 +44,12 @@ input[type="button"] {
     cursor: pointer;
 }
 
+/* Hover effect for the button */
 input[type="button"]:hover {
     background-color: #0056b3;
+}
+
+/* Paragraph text styling */
+p {
+    text-align: center;
 }
