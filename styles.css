@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;  /* Centers the container horizontally */
     align-items: flex-start;  /* Adjusts the vertical position, use 'center' or 'flex-end' for other positions */
-    padding-top: 50px;        /* Adjust this value to fine-tune the distance from the top */
+    padding-top: 189px;        /* Adjust this value to fine-tune the distance from the top */
     margin: 0;
 }
 
