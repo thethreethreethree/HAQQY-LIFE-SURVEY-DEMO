@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('images/background.png'); /* Make sure the image path is correct */
+    background-image: url('images/background.png'); /* Ensure the image path is correct */
     background-size: cover;
     color: #333;
     padding: 20px;
@@ -23,7 +23,7 @@ label {
     font-weight: bold;
 }
 
-input[type="submit"] {
+input[type="button"] {
     display: block;
     width: 100%;
     padding: 10px;
@@ -34,6 +34,6 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
     background-color: #0056b3;
 }
